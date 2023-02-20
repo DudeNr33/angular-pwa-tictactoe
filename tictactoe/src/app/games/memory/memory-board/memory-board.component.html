@@ -1,0 +1,9 @@
+<div>
+  <div *ngFor="let row of rows">
+    <app-memory-card
+      *ngFor="let col of row"
+      [tile]="col"
+      (cardFlippedEvent)="onCardFlipped()"
+    ></app-memory-card>
+  </div>
+</div>

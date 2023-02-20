@@ -17,7 +17,6 @@ export class BoardComponent implements OnInit {
   }
 
   newGame() {
-    console.log("Starting new game");
     this.squares = Array(9).fill(null);
     this.winner = null;
     this.xIsNext = true;

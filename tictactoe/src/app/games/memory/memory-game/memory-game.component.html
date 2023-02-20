@@ -1,0 +1,9 @@
+<h2>Memory</h2>
+
+<p-dropdown [options]="boardSizes" [(ngModel)]="selectedBoardSize"></p-dropdown>
+<button type="button" (click)="newGame()" pButton>New Game</button>
+<p *ngIf="message">{{ message }}</p>
+<app-memory-board
+  [numTiles]="selectedBoardSize"
+  (gameWonEvent)="onGameWon($event)"
+></app-memory-board>
